@@ -225,7 +225,7 @@ body.custom-cursor-active, body.custom-cursor-active a, body.custom-cursor-activ
   margin: 0 auto;
   padding: 0 28px;
 }
-section{ position: relative; padding: 120px 0; scroll-margin-top: var(--nav-h); }
+section{ position: relative; padding: 120px 0; }
 @media (max-width: 640px){ section{ padding: 88px 0; } }
 
 .eyebrow{
@@ -467,10 +467,7 @@ header.nav.scrolled{
   flex-direction:column;
   gap:5px;
   background:none; border:none;
-  padding:12px;
-  width: 44px; height: 44px;
-  align-items:center;
-  justify-content:center;
+  padding:8px;
 }
 .hamburger span{
   width:22px; height:2px;
@@ -804,7 +801,7 @@ header.nav.scrolled{
 /* ---------- 10. CERTIFICATIONS ---------- */
 .cert-grid{
   display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
 }
 .cert-card{
@@ -871,7 +868,7 @@ header.nav.scrolled{
 /* ---------- 12. CONTACT ---------- */
 .contact-grid{
   display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%),1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
   gap: 20px;
 }
 .contact-card{
@@ -969,48 +966,6 @@ footer{
   z-index: 1100;
 }
 #toast.show{ opacity:1; transform: translateX(-50%) translateY(0); }
-
-/* ---------- 16. MOBILE REFINEMENTS ---------- */
-@media (max-width: 900px){
-  .hero-canvas-wrap{ height: 300px; }
-}
-
-@media (max-width: 700px){
-  .edu-score{ text-align:left; }
-}
-
-@media (max-width: 560px){
-  .wrap{ padding: 0 20px; }
-  .nav-inner{ padding: 0 20px; }
-
-  .hero{ min-height: auto; padding-top: calc(var(--nav-h) + 28px); padding-bottom: 60px; }
-  .hero-canvas-wrap{ height: 240px; }
-  .hero-actions{ flex-direction: column; gap: 12px; }
-  .hero-actions .btn{ width: 100%; justify-content: center; }
-  .hero-socials{ justify-content: center; }
-  .scroll-cue{ display: none; }
-
-  .stats-grid{ gap: 26px 16px; }
-
-  section{ padding: 64px 0; }
-
-  .objective{ padding: 28px 20px; }
-  .objective::before{ font-size: 5rem; top: -4px; left: 14px; }
-
-  .cert-card, .contact-card, .info-card, .edu-card{ padding: 22px; }
-
-  #back-to-top{
-    bottom: 18px; right: 18px;
-    width: 46px; height: 46px;
-  }
-
-  .icon-link{ width: 46px; height: 46px; }
-}
-
-@media (max-width: 380px){
-  .hero-name{ font-size: 2.1rem; }
-  .stats-grid{ grid-template-columns: 1fr 1fr; }
-}
 
 </style>
 </head>
