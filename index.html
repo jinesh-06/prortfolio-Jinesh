@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <!--
@@ -898,9 +899,13 @@ header.nav.scrolled{
   padding: 8px 14px;
   border-radius: 999px;
   background: transparent;
-  transition: border-color 0.25s ease, transform 0.25s ease;
+  transition: border-color 0.25s ease, color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
 }
-.contact-card .action:hover{ border-color: var(--accent-cyan); transform: translateY(-2px); }
+.contact-card .action:hover{
+  border-color: var(--accent-cyan);
+  background: rgba(34,211,238,0.08);
+  box-shadow: 0 0 0 1px rgba(34,211,238,0.15), 0 8px 22px rgba(34,211,238,0.15);
+}
 
 /* ---------- 13. FOOTER ---------- */
 footer{
@@ -1337,7 +1342,7 @@ footer{
   }
 
   /* ---- Magnetic buttons + ripple ---- */
-  var magnetTargets = document.querySelectorAll('.btn, .icon-link, .nav-cta');
+  var magnetTargets = document.querySelectorAll('.btn, .icon-link, .nav-cta, .action');
   magnetTargets.forEach(function(el){
     if(isFinePointer && !reduceMotion){
       el.addEventListener('mousemove', function(e){
